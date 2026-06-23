@@ -4,6 +4,7 @@ export default async function handler(req, res) {
     }
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
+      console.log('[debug] key exists:', !!apiKey, 'length:', apiKey?.length ?? 'undefined');
 
   if (!apiKey) {
         return res.status(500).json({
